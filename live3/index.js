@@ -1,31 +1,27 @@
-// React, VueJS, Angular > 1.4 -> components
-// Android fragments, .NET Core components
+//import Table from './Table.js'
 
-import Table from './Table.js'
-
-// fetch('./data.json')
-//     .then(res => res.json())
-//     .then(data => {
-//         document.querySelector('#app').innerHTML = Table(data)
-//     })
-
-// axios.get('./data.json')
-//     .then(res => {
-//         document.querySelector('#app').innerHTML = Table(res.data)
-//     })
-
-// No top level await!
-// const results = await Promise.all([1,2,3].map(id => axios.get(id + '.json')))
-
-async function render() {
-    const { data } = await axios.get('./data.json')
-    document.querySelector('#app').innerHTML = Table(data)
+const Tabl = {
+    props: ['persons'],
+    template: `
+        <div>
+            {{ persons }}
+        </div>
+    `
 }
 
-render()
-
-
-
+new Vue({
+    el: '#app',
+    components: { Tabl },
+    data: () => ({ persons: [] }),
+    mounted() {
+        axios.get('./data.json').then(res => this.persons = res.data)
+    },
+    template: `
+        <div>
+            <tabl :persons="persons"></tabl>
+        </div>
+    `
+})
 
 
 

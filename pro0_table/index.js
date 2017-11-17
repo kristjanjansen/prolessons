@@ -1,6 +1,6 @@
 const data = [
-    {name: 'Jim', age: 32},
-    {name: 'Jill', age: 42}
+    {"name": "Jim", "age": "32"},
+    {"name": "Jill", "age": "42"}
 ]
 
 const HeadingRow = row => `
@@ -25,4 +25,8 @@ const Table = data => `
         ${data.map(Row).join('')}
     </table>
 `
-document.querySelector('#app').innerHTML = Table(data)
+fetch('./data.json')
+    .then(res => res.json())
+    .then(data => {
+        document.querySelector('#app').innerHTML = Table(data)
+    })

@@ -1,24 +1,15 @@
-//import Table from './Table.js'
-
-const Tabl = {
-    props: ['persons'],
-    template: `
-        <div>
-            {{ persons }}
-        </div>
-    `
-}
+import Tabl from './Tabl.js'
 
 new Vue({
     el: '#app',
     components: { Tabl },
-    data: () => ({ persons: [] }),
+    data: () => ({ data: [] }), // Reacti state
     mounted() {
-        axios.get('./data.json').then(res => this.persons = res.data)
+        axios.get('./data.json').then(res => this.data = res.data)
     },
     template: `
         <div>
-            <tabl :persons="persons"></tabl>
+            <tabl :data="data"></tabl>
         </div>
     `
 })

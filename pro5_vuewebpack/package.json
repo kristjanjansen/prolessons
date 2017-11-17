@@ -1,0 +1,18 @@
+{
+  "name": "pro5",
+  "private": "true",
+  "scripts": {
+    "build": "webpack --hide-modules",
+    "dev": "webpack --hide-modules --watch"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "vue": "^2.5.3"
+  }
+}

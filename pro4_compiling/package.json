@@ -1,0 +1,13 @@
+{
+  "name": "pro4",
+  "private": "true",
+  "scripts": {
+    "build": "rollup -i index.js -f iife | babel --presets env | uglifyjs > build.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "rollup": "^0.51.6",
+    "uglify-js": "^3.1.9"
+  },
+}

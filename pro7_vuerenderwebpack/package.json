@@ -1,0 +1,21 @@
+{
+  "name": "pro5",
+  "private": "true",
+  "scripts": {
+    "build": "webpack --hide-modules",
+    "dev": "webpack --hide-modules --watch"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-jsx-vue-functional": "^2.1.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-vue-jsx": "^3.5.0",
+    "vue": "^2.5.3"
+  }
+}

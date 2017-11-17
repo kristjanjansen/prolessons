@@ -1,0 +1,7 @@
+{
+  "presets": [
+    ["env", {"modules": false}],
+    "stage-1"
+  ],
+  "plugins": ["jsx-vue-functional", "transform-vue-jsx"]
+}

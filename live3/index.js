@@ -1,3 +1,4 @@
+import axios from 'axios'
 import Table from './Table.js'
 
 axios.get('./data.json')

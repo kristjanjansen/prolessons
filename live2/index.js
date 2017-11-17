@@ -1,10 +1,5 @@
+import axios from 'axios'
 import Table from './Table.js'
-
-// fetch('./data.json')
-//     .then(res => res.json())
-//     .then(data => {
-//         document.querySelector('#app').innerHTML = Table(data)
-//     })
 
 axios.get('./data.json')
     .then(res => {

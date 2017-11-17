@@ -25,6 +25,7 @@ const Table = data => `
         ${data.map(Row).join('')}
     </table>
 `
+
 fetch('./data.json')
     .then(res => res.json())
     .then(data => {
